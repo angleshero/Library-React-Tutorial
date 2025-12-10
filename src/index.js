@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { library } from '@fontawesome/fontawesome-svg-core';
-import { faBars, faShoppingCart, faTimes } from '@fontawesome/free-solid-svg-icons/faBars';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faBars, faShoppingCart, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 
-library.add(faBars, faShoppingCart);
+library.add(faBars, faShoppingCart, faTimes);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
