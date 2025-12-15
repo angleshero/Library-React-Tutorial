@@ -1,5 +1,7 @@
 import Nav from './components/nav';
 import Landing from './components/Landing';
+import Highlights from './components/Highlights';
+
 
 
 
