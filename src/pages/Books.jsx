@@ -25,6 +25,7 @@ const Books = () => {
                                     ))}
                         </div>
                         </div>
+                        </div>
 
                 </section>
                 </main>
