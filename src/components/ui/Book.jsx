@@ -6,7 +6,7 @@ const Book = ({ book }) => {
         <div className="className book">
                             <a href="">
                                 <figure className="book__img--wrapper">
-                                    <img src="book.url" alt="" className ="book__img"/>
+                                    <img src={book.url} alt="" className ="book__img"/>
 
                                     </figure>
                             </a>
