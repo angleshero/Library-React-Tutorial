@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Books from "./pages/Books";
 import BooksInfo from "./pages/BooksInfo";
 import Price from "./components/ui/Price";
+import Rating from "./components/ui/Rating";
 
 function App() {
   return (
@@ -14,8 +15,8 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/books" element={<Books books={books} />} />
-          <Route path="/books/1" element={<BooksInfo books={books} />} />
+          <Route path="/books" element={<Books books={Books} />} />
+          <Route path="/books/1" element={<BooksInfo books={Books} />} />
         </Routes>
 
         <Footer />
