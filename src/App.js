@@ -3,7 +3,7 @@ import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Books from "./pages/Books";
-import BooksInfo from "./pages/BooksInfo";
+import BookInfo from "./pages/BookInfo";
 import Price from "./components/ui/Price";
 import Rating from "./components/ui/Rating";
 
