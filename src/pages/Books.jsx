@@ -14,7 +14,7 @@ const Books = ( { books: initialBooks } ) => {
         }
         if (value === "RATING") {
             setBooks(books.slice().sort((a,b) => b.rating - a.rating));
-        }}
+        }
     return (
         <div id="books__body">
             <main id="books__main">
@@ -43,5 +43,5 @@ const Books = ( { books: initialBooks } ) => {
                 </main>
         </div>
     );
-}
+}}
 export default Books;
