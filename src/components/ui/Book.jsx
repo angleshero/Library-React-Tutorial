@@ -1,20 +1,21 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 import React from 'react';
 
 const Book = ({ book }) => {
     return (
         <div className="className book">
-                            <a href="">
+                            <Link to="">
                                 <figure className="book__img--wrapper">
                                     <img src={book.url} alt="" className ="book__img"/>
 
                                     </figure>
-                            </a>
+                            </Link>
                             <div className="book__title">
-                                <a href="/" className="book__title--link">
+                                <Link to="/" className="book__title--link">
                                 {book.title}
-                                </a>
-                            
+                                </Link>
+
                             </div>
                             <div className="book__ratings">
                                 {new Array(Math.floor(book.rating)).fill(0).map((_, index) => <FontAwesomeIcon icon="star" key={index} />)}
