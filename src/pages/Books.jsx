@@ -3,9 +3,10 @@ import { books } from '../data';
 import Book from '../components/ui/Book';
 import { useState } from 'react';
 
+
 const Books = ( { books: initialBooks } ) => {
     const [books, setBooks] = useState(initialBooks);
-    function filterBooks(filter) {
+    function filterBooks(value) {
         if (value === "LOW_TO_HIGH") {
             setBooks(books.slice().sort((a,b) => (a.salePrice || a.originalPrice) - (b.salePrice || b.originalPrice)));
         }
