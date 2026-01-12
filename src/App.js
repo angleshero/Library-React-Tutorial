@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Books from "./pages/Books";
 import BooksInfo from "./pages/BooksInfo";
+import Price from "./components/ui/Price";
 
 function App() {
   return (
