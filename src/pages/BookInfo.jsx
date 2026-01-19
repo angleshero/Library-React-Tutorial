@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 import Rating from '../components/ui/Rating';
 import Price from '../components/ui/Price';
 import Book from '../components/ui/Book';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const BookInfo = ({ books, addToCart}) => {
     const { id } = useParams();
