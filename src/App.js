@@ -8,6 +8,7 @@ import Price from "./components/ui/Price";
 import Rating from "./components/ui/Rating";
 import Cart from "./pages/Cart";
 import React, { useEffect, useState } from "react";
+import { books } from "./data";
 
 function App() {
   const [cart, setCart] = useState([]);
