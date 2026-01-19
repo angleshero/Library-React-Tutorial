@@ -4,10 +4,22 @@ import { Link, useParams } from 'react-router-dom';
 import Rating from '../components/ui/Rating';
 import Price from '../components/ui/Price';
 import Book from '../components/ui/Book';
+import React, { useState } from 'react';
 
-const BookInfo = ({ books}) => {
+const BookInfo = ({ books, addToCart}) => {
     const { id } = useParams();
     const book = books.find((book) => +book.id === +id);
+    const[added, setAdded] = React.useState(false);
+
+    function addBookToCart(book) {
+          addToCart(book);
+    }   
+
+    function bookExistsInCart() {
+        return CaretPosition.find(book => book.id === +id)
+    }
+
+
     return (
         <div id="books__body">
             <main id="books__main">
@@ -24,7 +36,7 @@ const BookInfo = ({ books}) => {
                         </Link>
                       </div>
                       <figure className="book__selected">
-                        <img src={book.url} alt="" className="book__selected--image" />
+                        <img src={book.url} alt="" className="book__selected--img" />
                       </figure>
                       <div className="book__selected--description">
                         <h2 className="book__selected--title">{book.title}</h2>
@@ -42,12 +54,20 @@ const BookInfo = ({ books}) => {
                             <p className="book__summary--para">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas iure laborum est? Amet dolorum reiciendis ad ipsum voluptates laudantium saepe cumque, molestias esse. Cum, ea doloremque perferendis optio quia quae.
                             </p>
-                            <button className="btn">
-                                Add to cart
-                            </button>
+                          
                         </div>
-
+                        {bookExistsInCart() ? (
+                            <Link to={`/cart`} className="book__link">
+                            <button className="btn">Checkout</button>
+                            </Link>
+                        ) : (
+                            <button className="btn" onClick={() => {addBookToCart(book); setAdded(true);}}>
+                                {added ? "Added to Cart" : "Add to Cart"}
+                            </button>
+                        )}
+                                
                       </div> 
+                      
                     </div>
                 </div>
 
