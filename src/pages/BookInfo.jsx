@@ -6,7 +6,7 @@ import Price from '../components/ui/Price';
 import Book from '../components/ui/Book';
 import { useState } from 'react';
 
-const BookInfo = ({ books, addToCart}) => {
+const BookInfo = ({ books, cart, addToCart}) => {
     const { id } = useParams();
     const book = books.find((book) => +book.id === +id);
     const[added, setAdded] = React.useState(false);
@@ -16,7 +16,7 @@ const BookInfo = ({ books, addToCart}) => {
     }   
 
     function bookExistsInCart() {
-        return CartPosition.find(book => book.id === +id)
+        return cart.some(item => item.id === +id)
     }
 
 
