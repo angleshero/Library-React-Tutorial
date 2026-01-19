@@ -40,7 +40,7 @@ import { Link } from 'react-router-dom';
                             {
                                 numberOfItems > 0 && <span className="cart__length">{numberOfItems}</span>
                             }
-                            <span className="cart__length">{numberOfItems}</span>
+                            
                         </li>
                     </ul>
                     <div className="menu__backdrop" onClick={closeMenu}>
