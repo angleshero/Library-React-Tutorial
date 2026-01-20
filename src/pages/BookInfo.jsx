@@ -42,7 +42,7 @@ const BookInfo = ({ books, cart, addToCart}) => {
                         <h2 className="book__selected--title">{book.title}</h2>
                         <Rating rating={book.rating} />
                         <div className="book__selected--price">
-                            <Price orginalPrice={book.originalPrice} salePrice={book.salePrice} />
+                            <Price originalPrice={book.originalPrice} salePrice={book.salePrice} />
                         </div>
                         <div className="book__summary">
                             <h3 className="book__summary--title">
