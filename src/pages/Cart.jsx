@@ -19,7 +19,7 @@ const Cart = ({ cart, changeQuantity, removeItem }) => {
                 <div className="books__container">
                     <div className="row">
                         <div className="book__selected--top" >
-                            <h2 className="cart__title">
+                            <h2 className="cart__title" flex-direction="column">
                                 Cart
                             </h2> 
                             <div className="cart">
