@@ -13,6 +13,7 @@ const Book = ({ book }) => {
     const image = new Image();
     image.src = book.url;
     image.onload = () => {
+        console.log("Book URL: ", book.url);
         setTimeout(() => { 
             if (mountedRef.current) {
                 setImg(true); 
@@ -27,7 +28,7 @@ const Book = ({ book }) => {
 
 
     return (
-        <div className="className book">
+        <div className="book">
             {img ? (
                 <>
                 <Link to={`/books/${book.id}`}>
