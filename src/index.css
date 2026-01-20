@@ -600,6 +600,7 @@ select {
   color: #242424;
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
 
 .book__selected--link {
