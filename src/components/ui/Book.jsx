@@ -10,12 +10,14 @@ const Book = ({ book }) => {
     const mountedRef = useRef(true);
 
   useEffect(() => {
+    console.log("Starting to load:", book.url);
     const image = new Image();
     image.src = book.url;
     image.onload = () => {
-        console.log("Book URL: ", book.url);
+        console.log("Image loaded successfully:", book.url);
         setTimeout(() => { 
             if (mountedRef.current) {
+                console.log("Setting img to true");
                 setImg(true); 
             }
         }, 300);
