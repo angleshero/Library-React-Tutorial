@@ -54,7 +54,7 @@ function changeQuantity(book, quantity) {
           <Route path="/" element={<Home />} />
           <Route path="/books" element={<Books books={books} />} />
           <Route path="/books/:id" element={<BookInfo books={books} addToCart={addToCart} cart={cart} />} />
-          <Route path="/cart/:id" element={<Cart books={books} cart={cart} changeQuantity={changeQuantity} removeItem={removeItem} />} />
+          <Route path="/cart/" element={<Cart books={books} cart={cart} changeQuantity={changeQuantity} removeItem={removeItem} />} />
         </Routes>
 
         <Footer />
