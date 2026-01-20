@@ -12,7 +12,7 @@ const Highlights = () => {
         <h2 className="section__title">
             Why choose <span className="purple">Library</span>?
         </h2>
-        <div className="hightligh__wrapper">
+        <div className="highlight__wrapper">
 
             <Highlight icon={<FontAwesomeIcon icon="bolt" />} 
             title="Easy and Quick"
